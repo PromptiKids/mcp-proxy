@@ -1,0 +1,10 @@
+{
+  "name": "mcp-bridge-custom",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Bridge SSE for MCP Filesystem and Memory",
+  "dependencies": {
+    "@modelcontextprotocol/server-filesystem": "0.6.2",
+    "@modelcontextprotocol/server-memory": "0.6.2"
+  }
+}
