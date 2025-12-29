@@ -1,0 +1,22 @@
+# Local dependencies (avoids architecture mismatch between host and container)
+node_modules
+npm-debug.log
+
+# Git files
+.git
+.gitignore
+
+# Local test data
+documents/
+memory_data/
+*.db
+
+# IDE configuration files
+.vscode/
+.idea/
+.DS_Store
+
+# Docker logs and overrides
+*.log
+docker-compose.override.yml
+  
