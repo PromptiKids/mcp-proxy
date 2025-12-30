@@ -43,10 +43,10 @@ jobs:
         with:
           context: .
           push: true
-          # Optimized for your IT13 (x86_64)
           platforms: linux/amd64
-          tags: ${{ id.meta.outputs.tags }}
-          labels: ${{ id.meta.outputs.labels }}
+          # Fixed: using 'steps' to access metadata outputs
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           # Caching to make subsequent builds faster
           cache-from: type=gha
           cache-to: type=gha,mode=max
