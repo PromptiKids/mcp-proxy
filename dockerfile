@@ -24,10 +24,6 @@ RUN mkdir -p /data/documents /data/memory && \
 # Use the non-root 'node' user provided by the official image
 USER node
 
-# Healthcheck: Verify if the server responds on port 5000
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD curl -f http://localhost:5000/sse || exit 1
-
 EXPOSE 5000 5001
 
 CMD ["node", "mcp-bridge.js"]
